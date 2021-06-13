@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Order Request History</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+    <div padding-left padding-right class="order-list">
+    <ion-list no-lines>
+        <ion-item *ngFor="let olist of orderList" >    
+          <table>
+            <tr>
+              <td colspan="3">
+                <b>{{olist.customerName}}</b><br>
+                Pickup Date & Time : <b>11-Feb-2021, 4:40 PM</b>
+              </td>
+            </tr>
+            <tr>
+              <td style="text-align: center;">
+                Order Req# :<br>
+                <b>{{olist.koId}}</b>
+              </td>
+              <td style="text-align: center;">
+               Order Date :<br>
+               <b>{{olist.orderDate}}</b>
+              </td>
+              <td style="text-align: center;">
+                Service :<br>
+                <b>{{olist.serviceName}}</b>
+              </td>
+            </tr>
+              <tr>
+                <td colspan="3">                 
+                  <p style="width: 260px;">
+                    <ion-icon name="md-locate" item-start></ion-icon>{{olist.location}}
+                  </p>
+                </td>               
+              </tr>
+              <tr>
+                <td colspan="2">                 
+                  <button ion-button block >Accept & Convert To Order</button>
+                </td>               
+                <td>                 
+                  <button ion-button block >Cancel</button>
+                </td>               
+              </tr>
+          </table>
+        </ion-item>       
+    </ion-list>
+    </div>  
+</ion-content>

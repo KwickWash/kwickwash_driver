@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>My Profile</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding *ngFor="let userDt of dataUser">
+    
+    <ion-list no-lines class="form">
+        <ion-item>
+            <ion-icon name="md-person" item-start></ion-icon>
+            <ion-label floating>Enter Full Name</ion-label>
+            <ion-input type="text" value="{{userDt.name}}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="md-mail" item-start></ion-icon>
+            <ion-label floating>Email Address</ion-label>
+            <ion-input type="emil" value="{{userDt.emailId}}"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="md-phone-portrait" item-start></ion-icon>
+            <ion-label floating>Phone Number</ion-label>
+            <ion-input type="text" value="{{userDt.mobile}}"></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button full>Update Now</button>
+    <p text-center>Change Password</p>
+</ion-content>

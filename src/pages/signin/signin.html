@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title></ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding >
+    <img src="assets/imgs/logo.png" class="logo">
+    <h3 text-center>Sign in to driver</h3>
+    <form #form="ngForm" class="center">
+    <ion-list no-lines class="form">
+        <ion-item>
+            <ion-icon name="md-mail" item-start></ion-icon>
+            <ion-label floating>Phone Number</ion-label>
+            <ion-input name="username" type="text" [(ngModel)]="postData.username" ></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="md-lock" item-start></ion-icon>
+            <ion-label floating>Password</ion-label>
+            <ion-input name="password" type="password"  [(ngModel)]="postData.password"></ion-input>
+            <h5 item-end (click)="password()">Forgot ?</h5>
+        </ion-item>
+        <ion-item style="border-bottom: 0px !important;">
+            <ion-label>Remember me</ion-label>
+            <ion-checkbox (click)="addLocalStorage()"></ion-checkbox>
+          </ion-item>
+    </ion-list>
+    <button ion-button block (click)="loginAction()">Sign in</button>
+    </form>  
+    
+</ion-content>

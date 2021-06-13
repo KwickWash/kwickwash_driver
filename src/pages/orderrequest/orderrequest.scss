@@ -1,0 +1,59 @@
+page-orderrequest {
+    .label-md {
+        margin: 12px 1px 0px 0;
+    }
+    .item-md{
+        background-color: transparent;
+        padding-left: 0px !important;
+    }
+    table {
+        border-collapse: collapse;
+        box-shadow: 0px 10px 12px 0px #ccc;
+        border-spacing: 0;
+        font-size: 13px;
+        width: 100%;
+        background-color: white;
+    }
+    tr{
+        border: 1px solid #ccc;
+    }
+    td{
+        border: 1px solid #ccc;   
+        padding: 10px;
+    }
+    .order-list {
+        .item {
+        
+            ion-avatar {
+                width: 55px;
+                height: 55px;
+                img {
+                    width: 55px;
+                    height: 55px;
+                    border-radius: 50%;
+                }
+            }
+            h2 {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: $text-dark;
+            }
+            p {
+                font-size: 1.25rem;
+                font-weight: 400;
+                color: $text-theme;
+            }
+            .note {
+                font-size: 1.2rem;
+                color: $text-dark;
+                text-align: right;
+                font-weight: 500;
+                small {
+                    display: block;
+                    color: $text-light;
+                    margin-top: 3px;
+                }
+            }
+        }
+    }
+}

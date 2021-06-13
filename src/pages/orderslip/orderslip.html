@@ -1,0 +1,61 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>&nbsp;</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+    <div class="order-head">
+        <p class="header">Order No. 22145052<small>09 September, 2018</small></p>
+        <ion-row>
+            <ion-col style="max-width: 110px;"><img src="assets/imgs/confirmed.png"></ion-col>
+            <ion-col>
+                <p>Order Status<strong>Order Confirmed</strong></p>
+            </ion-col>
+        </ion-row>
+    </div>
+    <div class="order-address">
+        <ion-row>
+            <ion-col col-6>Pick up<strong>Today, 08 September</strong><span>01:00 pm - 02:00 pm</span></ion-col>
+            <ion-col col-6>Delivery<strong>Tomorrow, 09 September</strong><span>09:00 am - 10:00 am</span></ion-col>
+            <ion-col col-12>Delivery<strong>B11 Old ford Street,Workshop tower zero ground (US)</strong></ion-col>
+        </ion-row>
+    </div>
+    <div class="all-orders">
+        <p class="order-header">Your cloth list</p>
+        <ion-label>
+            <span class="items">2</span>
+            <span class="cross">x</span>
+            <span class="name">Shirt (Man)</span>
+            <span class="service">Wash & Iron</span>
+            <span class="amount">$20</span>
+        </ion-label>
+        <ion-label>
+            <span class="items">3</span>
+            <span class="cross">x</span>
+            <span class="name">Trouser (Man)</span>
+            <span class="service">Wash & Iron</span>
+            <span class="amount">$25</span>
+        </ion-label>
+        <ion-label>
+            <span class="items">1</span>
+            <span class="cross">x</span>
+            <span class="name">Jeans (Man)</span>
+            <span class="service">Wash & Fold</span>
+            <span class="amount">$10</span>
+        </ion-label>
+        <ion-label>
+            <span class="items">2</span>
+            <span class="cross">x</span>
+            <span class="name">T-Shirt (Woman)</span>
+            <span class="service">Wash & Iron</span>
+            <span class="amount">$18</span>
+        </ion-label>
+        <div class="price-section">
+            <ion-label>Sub Total<span>$73</span></ion-label>
+            <ion-label>Tax<span>$5</span></ion-label>
+            <ion-label class="total-amount">Payble Amount<span>$78</span></ion-label>
+        </div>
+    </div>
+    <button ion-button full (click)="rate()" no-margin style="height: 50px">Rate Me Now</button>
+</ion-content>

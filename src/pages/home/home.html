@@ -1,0 +1,68 @@
+<ion-header >
+    <ion-navbar style="background: black !important;">
+        <img style="height: 40px;" src="assets/imgs/logo.png"/>      
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+   <!-- <ion-slides pager>
+        <ion-slide *ngFor="let slide of slides">
+            <img src="assets/imgs/slider-1.jpg" class="slide-image" />
+            <div class="banner-text">
+                <h3 class="slide-title h2class">Laundry at your Doorstep</h3>
+                <h2 class="slide-title h2class" [innerHTML]="slide.title"></h2>
+            </div>
+        </ion-slide>
+    </ion-slides>-->
+    <p padding-left padding-right class="heading">Shop Services</p>
+
+    <ion-scroll scrollX style="height:165px;white-space: nowrap;">
+        <div class="scroll-item" *ngFor="let service of dataService" (click)="selectproduct(service.sid,service.serviceName)">
+            <div class="item-box">
+                <img src="http://admin.kwickwash.in/{{service.serviceImg}}" style="width: 90px; border-radius: 7%;">
+                <h5 style="font-size: 11px; color: #037DC5;" [innerHTML]="service.serviceName"></h5>               
+                <p style="color: white;">Starting ₹ {{service.startAt}} {{service.unit}}</p>
+                <p style="color: white;">Duration-{{service.duration}} hr</p>
+            </div>
+        </div>
+    </ion-scroll>
+
+   <!-- <p padding-left padding-right class="heading">Your Active Order (2)<span>Past Orders</span></p>
+    <div padding-left padding-right class="order-list">
+        <ion-list no-lines>
+            <ion-item *ngFor="let olist of orderList" >              
+                <h2>Order No: {{olist.orderId}}</h2>
+                <p>Order Status : {{olist.deliveryStatus}}</p>
+                <ion-note item-end>₹{{olist.ttlPayableAmount}}
+                    <small>Order Date : {{olist.orderDate}}</small>
+                    <small>Delivery Date : {{olist.deliveryDate}}</small>
+                </ion-note>
+            </ion-item>
+           
+        </ion-list>
+    </div>-->
+
+    <ion-list *ngFor="let countOrder of CounterData">
+        <ion-item (click)="newReq()">
+            <ion-icon name="md-list" item-start class="iconcss"></ion-icon>
+            New Orders Assigned
+            <span class="bag-1">{{countOrder.newOrder}}</span>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="md-timer" item-start class="iconcss"></ion-icon>
+            Processing Orders
+            <span class="bag-2">{{countOrder.processOrder}}</span>
+        </ion-item>
+        <ion-item>
+            <ion-icon name="md-bicycle" item-start class="iconcss"></ion-icon>
+            Delivered Orders
+            <span class="bag-3">{{countOrder.deliveredOrder}}</span>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="md-menu" item-start class="iconcss"></ion-icon>
+            Total Orders
+            <span class="bag-4">{{countOrder.totalOrder}}</span>
+        </ion-item>
+    </ion-list>
+</ion-content>

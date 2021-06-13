@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Account</ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content class="bg-light">
+    <div class="order-head" (click)="profile()">
+        <ion-row *ngFor="let userDt of dataUser">           
+            <ion-col>
+                <p>{{userDt.name}}<span>View profile</span></p>
+            </ion-col>
+        </ion-row>
+    </div>
+    <ion-list no-lines>
+        <ion-item (click)="myorders()">
+            <ion-icon name="md-list-box" item-start></ion-icon>
+            My Orders
+        </ion-item>
+          
+        <ion-item (click)="signout()">
+            <ion-icon name="md-open" item-start></ion-icon>
+            Logout
+        </ion-item>
+    </ion-list>
+    <p text-center class="about">KwickWash Version 1.0.1</p>
+</ion-content>
